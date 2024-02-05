@@ -1,0 +1,41 @@
+$primary-color:black;
+$seconadry-color:rgb(53, 53, 145); 
+
+*
+{
+margin: 0;
+padding: 0;
+text-decoration: none;
+list-style-type:none ;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.center-xy
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@for $i from 1 through 10
+{
+    .grid-#{$i}
+    {
+        display: grid;
+        grid-template-columns: repeat($i, 1fr);
+        grid-gap: 10px;
+    }
+}
+//@keyframe animattion
+
+@keyframes riseUp{
+    from{
+        top: 10px;
+        opacity: 0;
+    }
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
